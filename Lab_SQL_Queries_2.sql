@@ -40,7 +40,7 @@ WHERE (length/60) > 3;
 
 /* 10) Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
 */
-SELECT LOWER(first_name), LOWER(last_name), LOWER(email) FROM sakila.customer; 
+SELECT CONCAT( (left(first_name,1)), substr(lower(first_name),2), ' ',last_name, ' - ' ,lower(email) ) from customer; 
 
 /* 11) What's the length of the longest film title?
 */
